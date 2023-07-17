@@ -60,7 +60,23 @@ from
 	inner join persons p on m.director_id = p.id
 where 
 	p.name = 'Clint Eastwood'
-order by m.year;	
+order by m.year;
+
+-- nb movies by year sorted by nb descending
+select
+	year, 
+	count(*) as nb_movie,
+	count(id) as nb_id,
+	count(duration) as nb_duration
+from movies
+group by year
+order by nb_movie desc;
+
+insert into movies (title, year) values ('Guardians of the Galaxy Vol. 3', 2023);
+
+-- director name, nb movies, first year, last year, total duration of movies 
+-- by director having directed more than 10 movies
+
 
 
 
