@@ -76,6 +76,31 @@ insert into movies (title, year) values ('Guardians of the Galaxy Vol. 3', 2023)
 
 -- director name, nb movies, first year, last year, total duration of movies 
 -- by director having directed more than 10 movies
+select 
+	pe.name, 
+	count(m.id) as nb_movies, 
+	min(m.year) as first_year, 
+	max(m.year) as last_year, 
+	sum(duration) as total_duration_min
+from 
+	movies m 
+	inner join persons pe on pe.id=m.director_id
+group by pe.id, pe.name
+having count(*) > 10
+order by nb_movies desc, pe.name;
+
+-- intermediary step
+select 
+	pe.id, pe.name,
+	m.id, m.title, m.year, m.director_id
+from 
+	movies m 
+	inner join persons pe on pe.id=m.director_id
+order by pe.id, pe.name;
+
+
+
+
 
 
 
