@@ -15,3 +15,6 @@
 - add director
 - add actors: Jack G, Dar Salim
 
+## DELETE
+- add a new movie, then delete it
+
