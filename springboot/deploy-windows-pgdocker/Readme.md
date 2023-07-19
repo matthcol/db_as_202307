@@ -11,3 +11,9 @@
 ### Linux
 `jar tvf .\movieapi.jar | grep postgres`
 
+## Change API port
+### application.properties
+server.port=8081
+### command line
+java -jar movieapi.jar --server.port=8081
+
