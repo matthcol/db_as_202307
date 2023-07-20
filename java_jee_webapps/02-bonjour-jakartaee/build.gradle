@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+war {
+    archiveBaseName = 'bonjour'
+    archiveVersion =  '2.0'
+}
+
+dependencies {
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+}
