@@ -1,0 +1,11 @@
+data-source add --name=MovieDSmaria \
+	--jndi-name=java:/movieDS \
+	--driver-name=mariadb-java-client-3.1.4.jar \
+	--connection-url=jdbc:mariadb://localhost:3306/dbmovie \
+	--statistics-enabled=true \
+	--max-pool-size=50 \
+	--initial-pool-size=50 \
+	--user-name=movie \
+	--password=password
+reload
+data-source test-connection-in-pool --name=MovieDSmaria
