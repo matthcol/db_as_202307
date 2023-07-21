@@ -1,0 +1,7 @@
+data-source add --name=MovieDSpostgresql \
+	--jndi-name=java:/movieDS \
+	--driver-name=postgresql-42.6.0.jar \
+	--connection-url=jdbc:postgresql://localhost:5432/dbmovie \
+	--user-name=movie \
+	--password=password
+reload
