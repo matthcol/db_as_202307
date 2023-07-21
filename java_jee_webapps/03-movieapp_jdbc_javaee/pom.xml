@@ -76,6 +76,5 @@
 				<version>3.0.0</version>
 			</plugin>
 		</plugins>
-        <finalName>${project.name}</finalName>
 	</build>
 </project>
