@@ -61,6 +61,7 @@
 - data-source test-connection-in-pool --name=MovieDSmaria
 - data-source flush-gracefully-connection-in-pool --name=MovieDSmaria
 - data-source remove --name=MovieDSmaria
+- data-source read-resource --name=MovieDSmaria
 
 ### avec JMX
 - /subsystem=datasources/data-source=MovieDSmaria:remove
